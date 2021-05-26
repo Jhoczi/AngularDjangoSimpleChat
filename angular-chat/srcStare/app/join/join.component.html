@@ -1,0 +1,23 @@
+<div id="join-area">
+  <header>
+    <img src="/assets/join.svg" alt="" />
+    <h3>Dolacz do konwersacji</h3>
+  </header>
+  <section>
+    <form (submit)="onSubmit()">
+      <input
+        type="text"
+        placeholder="Podaj swoj pseudonim"
+        name="username"
+        id="username"
+        [(ngModel)]="username"
+      />
+      <div>
+        <button [disabled]="submitDisabled">
+          {{  buttonText  }}
+          <span data-feather="arrow-right"></span>
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
